@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rails RPS</title>
-    <meta charset="utf-8">
+    <title>RailsRps</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <div>
+  <a href="/rock">Play Rock</a>
+</div>
+<div>
+  <a href="/paper">Play Paper</a>
+</div>
+<div>
+  <a href="/scissors">Play Scissors</a>
+</div>
+  
     <%= yield %>
+
+<div>
+<a href="/">Rules</a>
+</div>
   </body>
 </html>
